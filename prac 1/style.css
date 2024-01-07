@@ -1,0 +1,18 @@
+   h1,h2,h3,h4,h5,h6  {
+         color: whitesmoke;
+     }
+      p  {
+        font-size: 20px;
+        color: whitesmoke;
+      }
+     button {
+       
+        background-color: powderblue;
+        width: 20%;
+     }
+     img {
+        text-align: center;
+     }
+    ul   {
+        color:whitesmoke
+     }
