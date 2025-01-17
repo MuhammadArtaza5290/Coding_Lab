@@ -1,0 +1,27 @@
+setting up parsers for from
+    line no 5,6 are parsers .... done this work
+
+setting up ejs for ejs pages
+    what is ejs?
+    ejs is same as html . but , ejs has lot of dynamic power which we use in html.
+        install ejs from npm
+        setup ejs as a for view engine ....  done this work
+
+setting up public static routers
+
+1. initilize a project with npm.
+2. install express
+3. dynamic routing 
+        dynamic routing 
+        how to get data coming from frontend at backend routing
+
+        hum log kai baar kuch routes dekhte han un me sirf ek hi hissa change hotea hai.
+        /author/artaza
+        /author/saleem
+        /author/friends
+        sabse pahle browser par jaao 
+        url lihkiye apne jo apko chahiye and enter press kro
+        ab us url route create krya
+        response bhejiye kuch bhi
+            ab us url ko agar dynamic banana ha to realise karo konsa part dynamic hai aur us part ke age colon lagao.
+
