@@ -1,5 +1,5 @@
 // 1) write file
-// This node function is used to create new file in our directory and insert something in our file
+// This node function is used to create new file in our directory and insert something in our file. it is also used to overright file details.
 
 // const fs = require('fs');
 // fs.writeFile('hello.txt', "Hello young man how are you.", function(error){

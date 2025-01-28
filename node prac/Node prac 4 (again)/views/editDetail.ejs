@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Edit Details</title>
+  </head>
+  <body>
+    <div class="main w-full min-h-screen bg-zinc-900 p-10 text-white">
+        <a href="/" class="text-blue-500 inline-block mb-10">Go back to home</a>
+
+        
+
+        <form action="/editdetails" method="post">
+
+             <!-- Hidden Input for Filename -->
+         <input type="hidden" name="filenames" value="<%= filenames %>" />
+            <textarea
+          class="block w-3/4 resize-none rounded-md outline-none px-5 py-2 bg-zinc-800 mt-2"
+          name="Previousdescription"
+        ><%= filedetail %></textarea>
+            <textarea
+              class="block w-3/4 resize-none rounded-md outline-none px-5 py-2 bg-zinc-800 mt-2"
+              type="text"
+              placeholder="New Description"
+              name="Newdescription"
+            ></textarea>
+           
+            <input
+              class="mt-2 bg-yellow-600 px-5 py-2 rounded-md"
+              type="submit"
+              value="Update Description"
+              
+            />
+          </form>
+    </div>
+  </body>
+</html>

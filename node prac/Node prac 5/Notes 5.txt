@@ -1,0 +1,60 @@
+Data Storage:
+aisa kuch jaha par hum sare users ki information store kar skte han.
+concept of database
+
+Types of DBS
+1 SQL 
+2 NOSQL
+What is SQL?
+SQL data ko ek roop me rkhta ha . like tables ke form me.
+
+-----------------------------------------------------------------
+But in this course we learn NOSQL database.
+What is NOSQL?
+NOSQL khud me ik database nahi ha ye ik concept ha. Concept ye ha ke is me data objects ke roop me rkha jata ha.
+In this course we use Mongodb database.
+Mongodb is an actual database or Mongodb NOSQL concept ki base pe ha.
+Mongodb stores data in the form of objects.
+
+------------------------------------------------------------------
+What and why we learning Mongodb database?
+In Mongodb database we store data of different users.
+For Example: like hum ik facebook app bnate han jis me hum different users ka data store krta han.
+ like. username, email, password etc.
+
+terminologies - collections, documents, schemas, keys, models.
+
+In Backend we need to learn 2 things.. 
+Backend me 2 servers hota han. both servers are as follow
+1) Application server => Node js is our Application server.
+ application routes handle routes and accept requests. 
+ application server reqest ko accept krta ha or response sand krta ha.
+
+2) Database server => Mongodb is our database server.
+jab hum ko kisi data ki zaroorat hoti ha tab server se request database ko jati ha and database req ko accept krta ha or response server ko send krta ha.
+----------------------------------------------------------------------
+
+Now in this file we learn Mongodb database.
+when we made a project we use database.
+ik single project ke andr hum boht si collection bnate han .
+like hum koi collection bnate han.
+1 user collection.
+2 product collection
+3 saleman collection
+4 modified collection
+
+Things that we know that . It is Important to know.
+Database -> Collections -> Document 
+for Example=> user collection me bohat se users hote han. puri collection me se hum kisi user ko nikalte han use hum Document kehta han.
+-----------------------------------------------------------------------
+Now hum Code level pr kya likhta han.
+
+Code                  Database
+mongoose.connect -> database create
+jab hum mongoose ko connect (connect is a code) krta han to hma database create hota nazar ata ha.
+
+model create     ->   collection
+custmor model         custmor collection
+CREATE code      ->   document
+CREATE command is used to create document.
+jab hum code me model create krta han to hmare pass collection create hoti ha.
