@@ -190,3 +190,27 @@
 // let{name, age, course, contact} = student;
 
 // console.log(name, age, course, contact.email, contact.phone);
+
+// 6) Exercise array of objects
+
+// const products = [
+//       { id: 1, name: 'Apple', price: 100 },
+//       { id: 2, name: 'Orange', price: 800 },
+//       { id: 3, name: 'Banana', price: 250 },
+//       { id: 4, name: 'Mango', price: 520 }
+//    ]
+
+// let filtring = products.filter((val)=>{
+//    return val.price > 500
+// })
+// let discount = filtring.map((disc)=>{
+//    return{
+//       id: disc.id,
+//       name: disc.name,
+//       price: disc.price - (0.1 * disc.price)
+//    }
+// })
+// discount.forEach((finalVal)=>{
+//    console.log(`${finalVal.name} : ${finalVal.price}`);
+   
+// })
