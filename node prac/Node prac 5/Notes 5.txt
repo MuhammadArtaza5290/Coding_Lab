@@ -57,4 +57,4 @@ model create     ->   collection
 custmor model         custmor collection
 CREATE code      ->   document
 CREATE command is used to create document.
-jab hum code me model create krta han to hmare pass collection create hoti ha.
+jab hum code me model create krta han to hmare pass collection create hoti ha. 

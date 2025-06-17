@@ -1,7 +1,8 @@
-// What is framework?
+// What is framework? (framework ap ko ik flow deta ha, ke ap ko isi flow me kam krna ha)
 // Framework ik ase website ha jo developers ko ik work flow dati ha ke jo bhi flow ha us ko as it is hi apni website me paste kro.
 // like Bootstrap me se hum koi navbar ka code le sakte han. us ka connecting process. us me hum kuch chanhges kr skta han flow ko dakhta hua.
 // What is express js?
+// Express js is a npm package. it is a framework.
 // Express js manages everything from receving the request and giving the response.
 
 // const express = require('express')
@@ -17,8 +18,10 @@ const express = require("express");
 const app = express();
 // if we use any framework and sand data as a json formet.
 app.use(express.json());
+// app.use(express.json())
 // jab hum EGS use kr rha ho ge . means actual forms ka data hi bheja jay.
 app.use(express.urlencoded({extended: true}));
+// app.use(express.urlencoded({extended: true}))
 // ^ is line ko run krna se express ka sara data app variable me store ho jati han.
 // now we make some routes using app variable.
 // What is routes?
@@ -85,3 +88,4 @@ app.listen(port);
 // these lines are about cookies parser.
 // tumne to bheja tha plain text lakin server ko mila blob (blob means front end se jo data bheja jay wo us ke sath or jo b chezan front end se attach ho kar jati han like a ball.) which is not directly readable by server.
 // ab is cheez ko handle karna padega ki hum us blob ko wapis se readable kar saken.
+

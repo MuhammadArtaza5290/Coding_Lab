@@ -1,0 +1,19 @@
+NPM understanding:
+npm - node package manager
+npm ik place ha jhah different chezon ke packages milta han.
+hum un packages ko download kr ke apny projects me use ke sakta han.
+
+2. install and uninstall packages.
+install -> npm i packageKaName
+uninstall-> npm uninstall packageKaName
+
+if we want to install specific version of any package then we do this.
+install -> npm i packageKaName@version 
+     name of package '@' version which we want.
+
+3. understanding of node_modules
+node module file me hum jo packages download krta han wo package or jis pr wo package depend kr rha hota han un ki tmam files node_modules folder me a jati han
+   -> dependencies  - package and package ki dependencies 
+   -> devdependencies - esa packages jo sirf developement me kam 
+   ayn gy par jab app ban jay ga aur upload go jaayeha tab in
+   packages ko use nahi kiya jay ga.

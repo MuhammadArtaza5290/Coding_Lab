@@ -1,0 +1,12 @@
+Authentication and Authorization.
+user ko profile dena sy pehla ye check krna hota ha ke user ha kon. Authentication
+
+authorized to perform some tasks which are only allowed to executed by the admin. 
+
+server har baar bhool jata ha ki app kon ho, ab kyuki server bhool jata ha app kon go to har bar wo har kam ke liya apse puchega app kon ho
+
+cookie and session.
+sabsee pehla humein kuch cheezan seekhni ha alag alag
+1) cookie kesa set krta han and usy read kesa krta han.
+2) bcrypt kesa use krta hai for password encryption and decryption
+3) jwt kya hai and jwt mein data kaise store karte han and bahar nikalte han.

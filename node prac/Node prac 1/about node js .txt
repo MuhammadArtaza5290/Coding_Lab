@@ -1,0 +1,9 @@
+node js is not a => programming language, framework, software etc.
+
+actually node js is a js runtime enviroment.
+js se backend nahi ban sakta
+because js ke pass wo functionalities nahi ha jinse backend banta hai.
+ryan dahal isne socha js se backend banna chahiye.
+
+google chrome ka v8 engine ka code open source hai and ryan dhalus code me chedkhani kar rha ha
+fir usne 

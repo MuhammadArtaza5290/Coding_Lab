@@ -1,0 +1,10 @@
+setting up parsers for from
+setting up ejs for ejs pages
+    install ejs from npm
+    setup ejs as a view engine
+setting up public static file
+
+
+Dynamic routing:
+    Dynamic routing
+    how to get data coming from frontend to backend route
