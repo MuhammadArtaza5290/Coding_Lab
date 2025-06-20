@@ -6,6 +6,7 @@ const userModel = require('./models/user')
 const bcrypt = require('bcrypt')
 const postModel = require('./models/post')
 const jwt = require('jsonwebtoken')
+// const feedModel = require('./models/feed')
 
 
 app.use(express.json())
@@ -20,7 +21,7 @@ app.get('/', (req, res)=>{
 // ======================= Register ========================
 app.post('/register', async (req, res)=>{
     let{username, name, password, email, age} = req.body;
-    let user = await userModel.findOne({})
+    let user = await userModel.findOne({email: email})
     if(user){
         return res.status(500).send("User already registered.")
     }else{
@@ -35,7 +36,7 @@ app.post('/register', async (req, res)=>{
                 })
                 let token = jwt.sign({email: email, userid: createUser._id}, "shhhhhh")
                 res.cookie('token', token)
-                res.send('registered')
+                res.redirect('/profile')
             })
         })
     }
@@ -86,6 +87,8 @@ function isLoggedIn(req, res, next){
 // user ke login hony ke bad us ki profile show krwai ha is route ke through
 app.get('/profile', isLoggedIn , async (req, res)=>{
     let user = await userModel.findOne({email: req.user.email}).populate('post')
+    // console.log(user);
+    
     res.render('profile', {user})
     
 })
@@ -102,6 +105,39 @@ app.post('/post', isLoggedIn, async (req, res)=>{
     
     user.post.push(post._id)
     await user.save();
+    res.redirect('/profile')
+})
+
+// ============== in this route we add like feature ==========
+app.get('/like/:id',isLoggedIn, async (req, res)=>{
+    let post = await postModel.findOne({_id: req.params.id}).populate("user")
+    if (post.likes.indexOf(req.user.userid) === -1) {
+        post.likes.push(req.user.userid);
+    }else{
+        post.likes.splice(post.likes.indexOf(req.user.userid), 1)
+    }
+    await post.save();
+    res.redirect('/profile')  
+})
+
+// This is feed route means all posts are showing here
+
+app.get('/feed', isLoggedIn, async (req, res)=>{
+    let feed = await postModel.find().populate('user');
+    // console.log(feed);
+    res.render('feed', {feed: feed })
+    
+})
+
+// this is edit route 
+
+app.get('/edit/:id',isLoggedIn, async (req, res)=>{
+    let post = await postModel.findOne({_id : req.params.id}).populate('user')
+    res.render('edit', {post})
+})
+
+app.post('/update/:id', isLoggedIn, async (req, res)=>{
+    let updatePost = await postModel.findOneAndUpdate({_id: req.params.id}, {content: req.body.content})
     res.redirect('/profile')
 })
 
